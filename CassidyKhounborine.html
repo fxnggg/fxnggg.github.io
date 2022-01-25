@@ -1,0 +1,165 @@
+<html>
+
+<head>
+	<title>Cassidy Khounborine's Page</title>
+</head>
+
+<body style = "background-color: #FB98AD;">
+	
+<h1>Cassidy Khounborine's Page</h1>
+
+<p>
+	This page contains a short 3 question quiz about the K-pop girl group BLACKPINK. The answers to the following questions can be found <a href = "https://en.wikipedia.org/wiki/Blackpink" target = "_blank">here.</a>
+</p>
+
+<h4>When did BLACKPINK debut?</h4>
+<p>
+	<form>
+		<input type = "radio" id = "2018" name = "year" value = "2018">
+		<label for = "2018">2018</label><br>
+		
+		<input type = "radio" id = "2016" name = "year" value = "2016">
+		<label for = "2016">2016</label><br>
+		
+		<input type = "radio" id = "2017" name = "year" value = "2017">
+		<label for = "2017">2017</label><br>
+		
+		<input type = "radio" id = "2014" name = "year" value = "2014">
+		<label for = "2014">2014</label><br>
+	</form>
+</p>	
+
+<p id = "answer1"></p>
+
+<h4>Who is the oldest member of BLACKPINK?</h4>
+<p>
+	<form>
+		<input type = "radio" id = "Lisa" name = "member" value = "Lisa">
+		<label for = "Lisa">Lisa</label><br>
+		
+		<input type = "radio" id = "Rose" name = "member" value = "Rose">
+		<label for = "Rose">Rose</label><br>
+		
+		<input type = "radio" id = "Jennie" name = "member" value = "Jennie">
+		<label for = "Jennie">Jennie</label><br>
+		
+		<input type = "radio" id = "Jisoo" name = "member" value = "Jisoo">
+		<label for = "Jisoo">Jisoo</label><br>
+	</form>
+</p>	
+
+<p id = "answer2"></p>
+
+<h4>Which of the following is Lisa?</h4>
+<p>
+	<form>
+		<input type = "radio" id = "image1" name = "image" value = "Jisoo">
+		<label for = "Jisoo"><img src = "Jisoo.jpg"/></label><br>
+		
+		<input type = "radio" id = "image2" name = "image" value = "Jennie">
+		<label for = "Jennie"><img src = "Jennie.jpg"/></label><br>
+		
+		<input type = "radio" id = "image3" name = "image" value = "Lisa">
+		<label for = "Lisa"><img src = "Lisa.jpg"/></label><br>
+		
+		<input type = "radio" id = "image4" name = "image" value = "Rose">
+		<label for = "Rose"><img src = "Rose.jpg"/></label><br>
+	</form>
+</p>	
+
+<p id = "answer3"></p>
+
+<button onclick = "reset()">Reset</button>
+</body>
+
+<script type = "text/javascript">
+	window.onload = function() 
+	{
+		var year1 = document.getElementById('2018');
+		var year2 = document.getElementById('2016');
+		var year3 = document.getElementById('2017');
+		var year4 = document.getElementById('2014');
+		
+		var lisa = document.getElementById('Lisa');
+		var rose = document.getElementById('Rose');
+		var jennie = document.getElementById('Jennie');
+		var jisoo = document.getElementById('Jisoo');
+		
+		var image1 = document.getElementById('image1');
+		var image2 = document.getElementById('image2');
+		var image3 = document.getElementById('image3');
+		var image4 = document.getElementById('image4');
+		
+		year1.onclick = wrongQ1;
+		year2.onclick = correctQ1;
+		year3.onclick = wrongQ1;
+		year4.onclick = wrongQ1;
+		
+		lisa.onclick = wrongQ2;
+		rose.onclick = wrongQ2;
+		jennie.onclick = wrongQ2;
+		jisoo.onclick = correctQ2;
+		
+		image1.onclick = wrongQ3;
+		image2.onclick = wrongQ3;
+		image3.onclick = correctQ3;
+		image4.onclick = wrongQ3;
+	}
+	
+	function correctQ1()
+	{
+		document.getElementById("answer1").innerHTML = "Correct!";
+	}
+	
+	function wrongQ1()
+	{
+		document.getElementById("answer1").innerHTML = "Incorrect";
+	}
+	
+	function correctQ2()
+	{
+		document.getElementById("answer2").innerHTML = "Correct!";
+	}
+	
+	function wrongQ2()
+	{
+		document.getElementById("answer2").innerHTML = "Incorrect";
+	}
+	
+	function correctQ3()
+	{
+		document.getElementById("answer3").innerHTML = "Correct!";
+	}
+	
+	function wrongQ3()
+	{
+		document.getElementById("answer3").innerHTML = "Incorrect";
+	}
+	
+	function reset()
+	{
+		document.getElementById("2018").checked = false;
+		document.getElementById("2016").checked = false;
+		document.getElementById("2017").checked = false;
+		document.getElementById("2014").checked = false;
+		
+		document.getElementById("Lisa").checked = false;
+		document.getElementById("Rose").checked = false;
+		document.getElementById("Jennie").checked = false;
+		document.getElementById("Jisoo").checked = false;
+		
+		document.getElementById("image1").checked = false;
+		document.getElementById("image2").checked = false;
+		document.getElementById("image3").checked = false;
+		document.getElementById("image4").checked = false;
+		
+		document.getElementById("answer1").innerHTML = "";
+		document.getElementById("answer2").innerHTML = "";
+		document.getElementById("answer3").innerHTML = "";
+	}
+	
+</script>
+	
+</html>
+
+	
